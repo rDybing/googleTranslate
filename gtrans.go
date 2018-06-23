@@ -39,6 +39,7 @@ func getInput(in string) string {
 	reader := bufio.NewReader(os.Stdin)
 	out, _ := reader.ReadString('\n')
 	out = strings.Replace(out, "\n", "", -1)
+	out = strings.Replace(out, "\r", "", -1)
 	return out
 }
 
